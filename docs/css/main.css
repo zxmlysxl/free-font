@@ -34,16 +34,10 @@ header {
   text-align: center;
 }
 
-@font-face {
-  font-family: 'CustomFont';
-  src: url('../fonts/站酷字体系列/站酷快乐体.ttf') format('truetype'); /* Placeholder for the font URL */
-}
-
 header h1 {
   font-size: 2.5em;
   font-weight: bold;
   padding-top: 1em;
-  font-family: 'CustomFont';
 }
 header p a {
   color: #62bce5;
@@ -70,17 +64,18 @@ nav a.active {
 
 nav {
   text-align: center;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 main > div, main > div a, main > div span, main > div img {
   display: block;
 }
 
-main > div  img {
+main > div img {
   width: 100%;
   min-height: 68px;
   border-radius: 6px;
+  margin-bottom: 6px;
 }
 
 main > div a {
@@ -96,13 +91,14 @@ main > div {
   font-size: 14px;
   transition: all 0.3s;
   position: relative;
+  overflow: hidden;
 }
 main > div:hover {
   border: 1px solid #ffffff3b;
   background: #333;
 }
 main > div p {
-  padding-top: 3px;
+  position: relative;
   display: flex;
   align-items: center;
   line-height: 1;
@@ -112,7 +108,7 @@ main > div p {
 main > div .license {
   font-size: 10px;
   position: absolute;
-  margin-top: -47px;
+  margin-top: -21px;
   margin-left: 5px;
 }
 
@@ -131,6 +127,10 @@ main > div .license i {
 
 main > div p > span {
   color: #a1a1a1;
+  position: relative;
+  white-space: nowrap;
+  top: -1px;
+  font-size: 12px;
 }
 
 main > div:hover > .button {
@@ -162,13 +162,13 @@ main {
   margin: 0 auto;
   display: grid;
   gap: 0.95rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 12px;
 }
 
 @media (min-width: 600px) {
   main {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   header p {
     font-size: 1.15em;
@@ -183,13 +183,13 @@ main {
 
 @media (min-width: 900px) {
   main {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
   main {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -204,6 +204,13 @@ footer div, footer div a {
 footer div {
   font-size: small;
   padding-top: 0.35em;
+}
+
+footer time {
+  font-size: x-small;
+  color: #ffffff4f;
+  padding-top: 1rem;
+  display: inline-block;
 }
 
 footer {
